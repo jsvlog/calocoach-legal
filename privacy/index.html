@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — CaloCoach</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a class="active" href="./">Privacy</a>
+      <a href="../terms/">Terms</a>
+      <a href="../delete-account/">Delete my data</a>
+    </div>
+
+    <div class="header">
+      <div class="badge">PRIVACY</div>
+      <h1>CaloCoach</h1>
+      <div class="subtitle">Your data, your control — exactly what we collect and why.</div>
+    </div>
+
+    <div class="card">
+      <h2>Who we are</h2>
+      <p>CaloCoach is a calorie and nutrition tracking Android app with an AI coach and an AI meal scanner. It is operated by an independent developer based in the Philippines ("we", "us"). This policy explains what the app collects, who processes it, and how to remove it.</p>
+      <p>Questions or requests: <a href="mailto:johnson@policlash.ph">johnson@policlash.ph</a>.</p>
+    </div>
+
+    <div class="card">
+      <h2>What the app collects</h2>
+      <p>Only what you enter or ask the app to analyse:</p>
+      <ul>
+        <li><strong>Profile and body stats</strong> — name (optional, free text), age, gender, height, weight, goal weight, fitness goal, activity level and dietary preference. Used to calculate your calorie, protein, carb, fat and water targets.</li>
+        <li><strong>Health information you choose to share</strong> — optional health conditions selected during setup, used only to keep the coach's advice appropriate.</li>
+        <li><strong>Meal photos and their analysis</strong> — photos you take or pick, plus the AI's estimate of foods, calories, protein, carbs, fat, fiber and sugar.</li>
+        <li><strong>Logs</strong> — water intake, exercise (type, duration, calories burned), weight history and favourite foods.</li>
+        <li><strong>AI Coach conversations</strong> — the messages you send and the coach's replies.</li>
+        <li><strong>Usage counters</strong> — daily counts used to enforce the free-tier limits for AI scans and coach messages.</li>
+        <li><strong>Email (optional)</strong> — only if you choose to link one so you can get your account back on another device. Sign-in is anonymous by default; no email or password is required to use the app.</li>
+      </ul>
+      <p>We do <strong>not</strong> collect your location, contacts, calendar, advertising ID or device identifiers, and the app contains no third-party analytics or crash-reporting SDKs.</p>
+    </div>
+
+    <div class="card">
+      <h2>Who processes it</h2>
+      <p>We do not sell your data and we do not share it for advertising. Two service providers process it strictly to run the app:</p>
+      <ul>
+        <li><strong>Supabase</strong> — database, authentication and file storage. Your account data and meal photos are stored in Supabase's cloud infrastructure (project region: Mumbai, India), isolated per user with row-level security.</li>
+        <li><strong>OpenRouter</strong> — the AI inference gateway that runs the meal scanner and the coach. When you scan a meal, the photo is sent to it for analysis; when you message the coach, your message plus a summary of your recent data (targets, today's meals and totals, 7- and 30-day averages) is sent so the reply is relevant. OpenRouter routes the request to a model provider, which processes it and returns the result. We do not use your data to train AI models, and we ask providers not to either.</li>
+      </ul>
+      <p>No other third parties receive your data.</p>
+    </div>
+
+    <div class="card">
+      <h2>How it is stored and protected</h2>
+      <ul>
+        <li>All traffic between the app and our servers uses <strong>HTTPS</strong>.</li>
+        <li>Every table enforces <strong>per-user access rules</strong>, so one account cannot read another's rows.</li>
+        <li>Meal photos are held in restricted storage with per-user paths.</li>
+        <li>We do not store passwords: anonymous accounts use a device-held session token, and linking an email uses Supabase's built-in authentication.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>How long we keep it</h2>
+      <p>Your data stays until you delete it. There is no automatic expiry and no archive copy. Deleting your data removes the profile, meals, photos, logs, favourites, coach messages and usage counters — see <a href="../delete-account/">Delete my data</a>.</p>
+      <p>Because sign-in is anonymous, the account lives on this device. If you reinstall the app or clear its data without linking an email, the old anonymous account becomes unreachable for you (we can still delete it, but we cannot tie it back to you without its account ID).</p>
+    </div>
+
+    <div class="card">
+      <h2>Your choices</h2>
+      <ul>
+        <li><strong>Delete everything</strong> from inside the app: Profile → Settings → Delete All My Data, or via the <a href="../delete-account/">web deletion page</a>.</li>
+        <li><strong>Delete one item</strong> — individual meals, water entries, exercise logs and weight entries can be removed in the app.</li>
+        <li><strong>Turn the coach's proactive check-ins off</strong> — Settings → Coach habits (or the action row under a check-in).</li>
+        <li><strong>Email us</strong> at <a href="mailto:johnson@policlash.ph">johnson@policlash.ph</a> for access, correction or deletion requests; we answer within 30 days.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>AI and health disclaimer</h2>
+      <p>Meal analysis and coaching are generated by AI and can be wrong — portions, ingredients and calorie estimates included. CaloCoach is a tracking and information tool, not a medical device, and it does not give medical advice, diagnosis or treatment. Talk to a doctor or registered nutritionist-dietitian before changing your diet, especially if you are pregnant, managing a condition, or taking medication. In an emergency, contact local emergency services.</p>
+    </div>
+
+    <div class="card">
+      <h2>Children</h2>
+      <p>CaloCoach is not directed to children under 13 and we do not knowingly collect their data. If you believe a child has used the app, email us and we will delete the account.</p>
+    </div>
+
+    <div class="card">
+      <h2>Changes</h2>
+      <p>If this policy changes materially we will update this page and the "last updated" date below, and note the change in the app's release notes. Continued use after an update means you accept the new policy.</p>
+    </div>
+
+    <p class="last-updated">Last updated: October 30, 2026</p>
+    <p class="footer"><a href="../">CaloCoach legal</a> · <a href="../terms/">Terms of Service</a> · <a href="../delete-account/">Delete my data</a></p>
+  </div>
+</body>
+</html>
