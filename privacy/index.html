@@ -36,18 +36,20 @@
         <li><strong>Logs</strong> — water intake, exercise (type, duration, calories burned), weight history and favourite foods.</li>
         <li><strong>AI Coach conversations</strong> — the messages you send and the coach's replies.</li>
         <li><strong>Usage counters</strong> — daily counts used to enforce the free-tier limits for AI scans and coach messages.</li>
-        <li><strong>Email (optional)</strong> — only if you choose to link one so you can get your account back on another device. Sign-in is anonymous by default; no email or password is required to use the app.</li>
+        <li><strong>Account details (optional)</strong> — you can use CaloCoach without signing in. If you choose to sign in with Google, we receive your email address and Google account identifier. If you choose to sign in with an email and password, we store that email address and a hashed password. Either way it is used only so you can reach the same data from another device.</li>
+        <li><strong>Device identifier (Android ID)</strong> — a value scoped to this app's signing key, this device and this user. It is used for one purpose only: restoring your account and data on the same phone after you uninstall and reinstall the app. It is not an advertising ID, it is never shared with anyone, and it is not used to track you across apps or services.</li>
       </ul>
-      <p>We do <strong>not</strong> collect your location, contacts, calendar, advertising ID or device identifiers, and the app contains no third-party analytics or crash-reporting SDKs.</p>
+      <p>We do <strong>not</strong> collect your location, contacts, calendar or advertising ID, and the app contains no third-party analytics or crash-reporting SDKs. The Android ID described above is the only device identifier the app uses.</p>
     </div>
 
     <div class="card">
       <h2>Who processes it</h2>
-      <p>We do not sell your data and we do not share it for advertising. Two service providers process it strictly to run the app:</p>
+      <p>We do not sell your data and we do not share it for advertising. Four service providers process it strictly to run the app:</p>
       <ul>
         <li><strong>Supabase</strong> — database, authentication and file storage. Your account data and meal photos are stored in Supabase's cloud infrastructure (project region: Mumbai, India), isolated per user with row-level security.</li>
         <li><strong>OpenRouter</strong> — the AI inference gateway that runs the meal scanner and the coach. When you scan a meal, the photo is sent to it for analysis; when you message the coach, your message plus a summary of your recent data (targets, today's meals and totals, 7- and 30-day averages) is sent so the reply is relevant. OpenRouter routes the request to a model provider, which processes it and returns the result. We do not use your data to train AI models, and we ask providers not to either.</li>
         <li><strong>RevenueCat</strong> — subscription management. If you buy CaloCoach Premium, RevenueCat receives your account ID and the Google Play purchase receipt so we can confirm the subscription is active and unlock Premium. It does not receive your meals, photos, health data or coach messages.</li>
+        <li><strong>Google</strong> — sign-in provider, used only if you choose "Continue with Google". Google authenticates you and passes us your email address and account identifier. It receives no meals, photos, health data or coach messages.</li>
       </ul>
       <p>No other third parties receive your data.</p>
     </div>
@@ -58,14 +60,14 @@
         <li>All traffic between the app and our servers uses <strong>HTTPS</strong>.</li>
         <li>Every table enforces <strong>per-user access rules</strong>, so one account cannot read another's rows.</li>
         <li>Meal photos are held in restricted storage with per-user paths.</li>
-        <li>We do not store passwords: anonymous accounts use a device-held session token, and linking an email uses Supabase's built-in authentication.</li>
+        <li>Passwords are never stored by us. If you set one, Supabase Authentication keeps only a one-way hash; if you never sign in, the app uses a device-held session token instead.</li>
       </ul>
     </div>
 
     <div class="card">
       <h2>How long we keep it</h2>
-      <p>Your data stays until you delete it. There is no automatic expiry and no archive copy. Deleting your data removes the profile, meals, photos, logs, favourites, coach messages and usage counters — see <a href="../delete-account/">Delete my data</a>.</p>
-      <p>Because sign-in is anonymous, the account lives on this device. If you reinstall the app or clear its data without linking an email, the old anonymous account becomes unreachable for you (we can still delete it, but we cannot tie it back to you without its account ID).</p>
+      <p>Your data stays until you delete it. There is no automatic expiry and no archive copy. Deleting your data removes the profile, meals, photos, logs, favourites, coach messages, usage counters and the sign-in record itself (the email address or Google identity) — see <a href="../delete-account/">Delete my data</a>.</p>
+      <p>Signing in is optional. If you never sign in, the account is tied to this phone through the device identifier described above, so reinstalling the app on the same phone — or clearing its data — restores the same account and data. It becomes unreachable for you only if you delete your data in the app, or if you move to a different phone or a factory-reset device without having signed in with Google or an email.</p>
     </div>
 
     <div class="card">
@@ -93,7 +95,7 @@
       <p>If this policy changes materially we will update this page and the "last updated" date below, and note the change in the app's release notes. Continued use after an update means you accept the new policy.</p>
     </div>
 
-    <p class="last-updated">Last updated: November 4, 2026</p>
+    <p class="last-updated">Last updated: November 18, 2026</p>
     <p class="footer"><a href="../">CaloCoach legal</a> · <a href="../terms/">Terms of Service</a> · <a href="../delete-account/">Delete my data</a></p>
   </div>
 </body>
